@@ -1,47 +1,38 @@
-# TypeScript Next.js example
+# <b>Todo App</b>
+This is a simple Todo app built using React, Material UI, and localForage for storage.
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## <b>Tests</b>
+In order to ensure the functionality and reliability of the app, it is important to write tests for the various components and functions.
 
-## Deploy your own
+Here are some guidelines on how to write tests for the components and functions used in this app:
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+### React Components
+For the React components, we recommend using the react-testing-library framework. This framework provides simple and effective ways to test React components, ensuring that they behave as expected.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+Here are some examples of tests that can be written for this app:
 
-## How to use it?
+- Test that the TodoForm component correctly updates the state with the input value when the form is submitted
+- Test that the TodoList component correctly renders the todos from the state
+- Test that the TodoItem component correctly renders the text and done status of each todo
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+### localForage
+For localForage, we recommend using the @testing-library/localforage library. This library provides a simple and effective way to test the behavior of localForage in a controlled environment.
+
+Here are some examples of tests that can be written for this app:
+
+- Test that the setItem function correctly stores the todos in local storage
+- Test that the getItem function correctly retrieves the todos from local storage
+Please note that when writing tests, it's important to keep in mind the desired behavior and edge cases, and to test accordingly.
+
+## <b>Running Tests</b>
+In order to run the tests, you will need to have the necessary dependencies installed. To do this, run the following command in the root directory of the project:
 
 ```bash
-npx create-next-app --example with-typescript with-typescript-app
+npm install
 ```
+
+Once the dependencies have been installed, you can run the tests by using the following command:
 
 ```bash
-yarn create next-app --example with-typescript with-typescript-app
+npm test
 ```
-
-```bash
-pnpm create next-app --example with-typescript with-typescript-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
