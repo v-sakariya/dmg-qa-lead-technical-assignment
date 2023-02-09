@@ -24,6 +24,18 @@ Here are some examples of tests that can be written for this app:
 - Test that the getItem function correctly retrieves the todos from local storage
 Please note that when writing tests, it's important to keep in mind the desired behavior and edge cases, and to test accordingly.
 
+### Testing the Node.js API
+We recommend using the Mocha framework for writing tests for the Node.js API. This framework provides a simple and flexible interface for writing and running tests.
+
+Here are some examples of tests that can be written for the API:
+
+- Test that the GET `/todo` endpoint returns the list of todos
+- Test that the POST `/todo` endpoint correctly adds a new todo to the list
+- Test that the DELETE `/todo` endpoint correctly removes a todo from the list
+- Test the authentication routes, such as POST `/login`
+- Test the handling of incorrect routes
+- Test the handling of CORS (Cross-Origin Resource Sharing)
+
 ## <b>Running Tests</b>
 In order to run the tests, you will need to have the necessary dependencies installed. To do this, run the following command in the root directory of the project:
 
@@ -36,3 +48,6 @@ Once the dependencies have been installed, you can run the tests by using the fo
 ```bash
 npm test
 ```
+
+## <b>Contributing</b>
+If you find any bugs or have suggestions for improvements, feel free to open an issue or make a pull request.

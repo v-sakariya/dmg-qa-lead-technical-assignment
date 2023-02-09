@@ -49,7 +49,7 @@ app.post("/login", async (req: Request, res: Response) => {
     res.cookie("JWT", jwtSign(email));
     res.status(200).send("OK");
   } else {
-    res.status(200).send("Invalid password");
+    res.status(401).send("Invalid password");
   }
 });
 
