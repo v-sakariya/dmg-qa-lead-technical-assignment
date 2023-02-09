@@ -1,5 +1,5 @@
 # <b>Todo App</b>
-This is a simple Todo app built using React, Material UI, and localForage for storage.
+This is a simple Todo app built using React, Material UI, and localForage for storage and a Node.js REST API for handling data operations.
 
 ## <b>Tests</b>
 In order to ensure the functionality and reliability of the app, it is important to write tests for the various components and functions.
