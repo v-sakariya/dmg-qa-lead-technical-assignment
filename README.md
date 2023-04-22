@@ -48,6 +48,14 @@ Once the dependencies have been installed, you can run the tests by using the fo
 ```bash
 npm test
 ```
+## <b>Steps to Run e2e Tests in Frontend with Playwright Test Suite</b>
+Frontend e2e tests are carried out in Playwright testing suite.
+
+- Navigate to the Frontend Directory and run 'npm init playwright@latest'
+- execute 'npx playwright test' (By default tests will be run on all 3 browsers, chromium, firefox and webkit using 3 workers)
+- to execute in a chromium execute 'npx playwright test --project=chromium'
+- to debug what actions are executed run 'npx playwright test --project=chromium --debug'
+- execute 'npx playwright show-report' to get a detailed analysis of what tests are passing/failing
 
 ## <b>Contributing</b>
 If you find any bugs or have suggestions for improvements, feel free to open an issue or make a pull request.
