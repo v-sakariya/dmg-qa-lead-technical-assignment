@@ -4,7 +4,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "test-ct": "playwright test -c playwright-ct.config.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -17,6 +18,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.32.3",
     "@playwright/test": "^1.32.3",
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",

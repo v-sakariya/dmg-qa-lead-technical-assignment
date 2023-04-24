@@ -16,8 +16,8 @@ const deleteBtnName = 'Delete'
 const inputFieldLabel = 'New Todo'
 const urlLink = "http://localhost:3000"
 
+test("Todo Items Check",async ({ page }) => {
 
-test("Checking for default Todo Items",async ({ page }) => {
     //Navigate to the URL link for Frontend
     await page.goto(urlLink)
 
@@ -28,6 +28,11 @@ test("Checking for default Todo Items",async ({ page }) => {
     await page.getByLabel(todoItems.items1).isVisible()
 
     await page.getByLabel(todoItems.items2).isVisible()
+
+    //check that checkbox is checked or not
+    console.log(await page.getByRole(listItem).filter({hasText:todoItems.items1}).getByRole(checkBox).isChecked())  //returns true in the Attachment section of Playwright report
+
+    console.log(await page.getByRole(listItem).filter({hasText:todoItems.items2}).getByRole(checkBox).isChecked())  //returns false in the Attachment section of Playwright report
 
     await page.waitForTimeout(3000)
 
@@ -59,6 +64,10 @@ test("Checking for default Todo Items",async ({ page }) => {
 
     await page.getByRole(listItem).filter({hasText:todoItems.items4}).getByRole(button,{name:deleteBtnName}).click()
 
+    if((await page.getByLabel(inputFieldLabel).inputValue()).length === 0){
+        console.log(await page.getByText(submitBtnName).isDisabled())   // the input field is empty and should be disabled, feature to be added  
+    }
+    
     await page.waitForTimeout(3000)
 })
 
