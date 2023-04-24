@@ -57,5 +57,8 @@ Frontend e2e tests are carried out in Playwright testing suite.
 - to debug what actions are executed run 'npx playwright test --project=chromium --debug'
 - execute 'npx playwright show-report' to get a detailed analysis of what tests are passing/failing
 
+## <b>Git Issue: Please Read this</b>
+As the repository is forked from the original repo, this repo does not have an option make it private.
+
 ## <b>Contributing</b>
 If you find any bugs or have suggestions for improvements, feel free to open an issue or make a pull request.
