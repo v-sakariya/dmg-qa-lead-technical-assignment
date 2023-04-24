@@ -64,6 +64,7 @@ test("Todo Items Check",async ({ page }) => {
 
     await page.getByRole(listItem).filter({hasText:todoItems.items4}).getByRole(button,{name:deleteBtnName}).click()
 
+    // This test provides an edge case that the input should not be empty
     if((await page.getByLabel(inputFieldLabel).inputValue()).length === 0){
         console.log(await page.getByText(submitBtnName).isDisabled())   // the input field is empty and should be disabled, feature to be added  
     }
